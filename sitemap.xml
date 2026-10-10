@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://ayogiclife.de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ayogiclife.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ayogiclife.de/de/"/></url>
+  <url><loc>https://ayogiclife.de/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ayogiclife.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ayogiclife.de/de/"/></url>
+  <url><loc>https://ayogiclife.de/impressum/</loc></url>
+  <url><loc>https://ayogiclife.de/datenschutz/</loc></url>
+</urlset>
