@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deine erste Stunde – A Yogic Life</title>
+<meta name="description" content="Yoga in Berg am Laim starten: Mit dem Kennenlern-Paket bekommst du 3 Stunden in 3 Wochen für 49 €. Kleine Gruppen, alle Level, Material vorhanden.">
+<link rel="alternate" hreflang="en" href="https://ayogiclife.de/start/">
+<link rel="alternate" hreflang="de" href="https://ayogiclife.de/de/start/">
+<link rel="preload" href="../../fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Layout: calm single scroll, photo-led sections alternating left/right; Sage bar, Teal veil on the hero, Gold only for booking. */
+@font-face{font-family:"Marcellus";src:url("../../fonts/marcellus-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Figtree";src:url("../../fonts/figtree-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Figtree";src:url("../../fonts/figtree-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+:root{
+  --sage:#8FA882; --sage-soft:#E7EDE3; --teal:#1A7A7A; --teal-deep:#0F4D4D;
+  --gold:#C8A84B; --gold-hover:#B8963A;
+  --paper:#FAF8F4; --ink:#1F2B29; --ink-soft:#4A5654; --line:#DCE2DA; --white:#FFFFFF;
+  --f-display:"Marcellus","Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --step--1:clamp(.84rem,.8rem + .15vw,.92rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.2rem,1.1rem + .5vw,1.45rem);
+  --step-2:clamp(1.55rem,1.3rem + 1.1vw,2.2rem);
+  --step-3:clamp(2.05rem,1.6rem + 2.2vw,3.4rem);
+  --gutter:clamp(16px,4vw,40px); --maxw:1120px; --radius:6px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:var(--step-3)}
+h3{font-size:var(--step-1)}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-size:var(--step--1);letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.lead{font-size:var(--step-1);color:var(--ink-soft);max-width:38ch}
+.prose{max-width:62ch;color:var(--ink-soft);display:grid;gap:1em}
+section{padding-block:clamp(56px,9vw,112px)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.7em 1.35em;border-radius:999px;font-weight:600;font-size:var(--step-0);text-decoration:none;transition:background .2s,transform .2s;border:2px solid transparent}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-hover)}
+.btn-ghost{border-color:currentColor;color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-line{border-color:var(--teal);color:var(--teal)}
+.btn-line:hover{background:var(--sage-soft)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Header */
+.site-head{position:sticky;top:0;z-index:20;background:var(--sage);color:var(--ink)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1.1}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem}
+.brand small{font-size:.78rem;color:var(--ink);opacity:.82}
+.head-right{display:flex;align-items:center;gap:14px}
+.lang{font-size:var(--step--1);font-weight:600;letter-spacing:.06em;display:flex;gap:6px}
+.lang a,.lang span{color:var(--ink);text-decoration:none;padding:4px}
+.lang [aria-current]{border-bottom:2px solid var(--ink)}
+.lang .soon{opacity:.5}
+.site-head .btn{min-height:40px;padding:.45em 1.1em;font-size:.95rem}
+
+/* Hero */
+.hero{background:var(--teal-deep);color:var(--white);padding-block:0;display:grid}
+.hero-photo{position:relative;aspect-ratio:4/3;max-height:62vh;overflow:hidden}
+.hero-photo picture,.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.hero-text{padding:clamp(28px,6vw,72px) var(--gutter) clamp(36px,6vw,72px);display:grid;gap:20px;align-content:center}
+.hero h1{font-size:var(--step-3);max-width:16ch}
+.hero .lead{color:rgba(255,255,255,.9);max-width:40ch}
+.hero .eyebrow{color:var(--gold)}
+@media (min-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);min-height:min(680px,82vh)}
+  .hero-photo{order:2;aspect-ratio:auto;max-height:none;height:100%}
+  .hero-text{padding-left:max(var(--gutter),calc((100vw - var(--maxw))/2 + var(--gutter)))}
+}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:var(--step--1);color:rgba(255,255,255,.9)}
+.stars{color:var(--gold);letter-spacing:.1em}
+
+/* Why */
+.why{display:grid;gap:clamp(28px,4vw,48px)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.why-item{display:grid;gap:8px;padding-top:18px;border-top:1px solid var(--line)}
+.why-item p{color:var(--ink-soft)}
+
+/* Classes */
+.classes{background:var(--white)}
+.split{display:grid;gap:clamp(28px,5vw,64px);align-items:start}
+@media (min-width:860px){.split{grid-template-columns:1fr 1fr}.split.rev>:first-child{order:2}}
+.split > *{min-width:0}
+.class-list{display:grid;gap:22px;margin-top:8px}
+.class{display:grid;gap:4px}
+.class .meta{font-size:var(--step--1);color:var(--teal);font-weight:600;letter-spacing:.04em}
+.class p{color:var(--ink-soft)}
+.arc{margin-top:8px;padding:22px;background:var(--sage-soft);border-radius:var(--radius);display:grid;gap:12px}
+.arc ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:arc}
+.arc li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;counter-increment:arc}
+.arc li::before{content:counter(arc);font-family:var(--f-display);color:var(--teal);font-size:1.3rem}
+.arc li b{font-weight:600}
+.arc small{color:var(--ink-soft);font-size:var(--step--1)}
+.photo{border-radius:var(--radius);overflow:hidden}
+.photo picture{display:block;height:100%}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo-tall{aspect-ratio:3/4}
+
+/* Schedule */
+.schedule{margin-top:clamp(40px,6vw,64px);display:grid;gap:16px}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:var(--step--1);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+td:first-child{font-weight:600;white-space:nowrap}
+td:nth-child(2){font-family:var(--f-display);font-size:1.15rem;color:var(--teal);white-space:nowrap}
+td small{display:block;color:var(--ink-soft);font-size:var(--step--1)}
+.note{font-size:var(--step--1);color:var(--ink-soft)}
+
+/* Studio */
+.studio-photos{display:grid;gap:12px;grid-template-columns:1.4fr 1fr}
+.studio-photos .photo:first-child{grid-row:span 2}
+.studio-photos .photo:first-child img{aspect-ratio:auto}
+@media (max-width:640px){.studio-photos{grid-template-columns:1fr}.studio-photos .photo:first-child{grid-row:auto}}
+.facts{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.facts li{padding-left:22px;position:relative;color:var(--ink-soft)}
+.facts li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:8px;border-radius:50%;background:var(--sage)}
+
+/* Prices */
+.prices{background:var(--sage-soft)}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:clamp(28px,4vw,44px)}
+.price{background:var(--white);border-radius:var(--radius);padding:24px;display:grid;gap:8px;align-content:start}
+.price .amount{font-family:var(--f-display);font-size:var(--step-2);color:var(--teal);font-variant-numeric:tabular-nums}
+.price p{color:var(--ink-soft);font-size:var(--step--1)}
+.price.featured{outline:2px solid var(--gold)}
+.price .tag{justify-self:start;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:3px 10px;border-radius:999px}
+.price-more{margin-top:16px;background:var(--white);border-radius:var(--radius);padding:8px 24px;display:grid}
+.price-more div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.price-more div:last-child{border-bottom:0}
+.price-more span{color:var(--ink-soft)}
+.price-more b{font-family:var(--f-display);font-weight:400;font-size:1.2rem;color:var(--teal);white-space:nowrap}
+
+/* About */
+.about-photo{aspect-ratio:3/5;max-height:640px}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.creds li{font-size:var(--step--1);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink-soft);background:var(--white)}
+
+/* Tradition */
+.tradition{background:var(--teal-deep);color:var(--white)}
+.tradition .eyebrow{color:var(--gold)}
+.tradition .prose{color:rgba(255,255,255,.86)}
+.tradition .photo img{height:auto}
+
+/* Reviews */
+.reviews-box{display:grid;gap:18px;justify-items:start}
+.score{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.score .big{font-family:var(--f-display);font-size:var(--step-3);color:var(--teal);font-variant-numeric:tabular-nums}
+
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:16px;width:100%}
+.quote{margin:0;background:var(--white);border-radius:var(--radius);padding:24px;display:grid;gap:14px;align-content:space-between}
+.quote blockquote{margin:0;font-family:var(--f-display);font-size:1.15rem;line-height:1.45;color:var(--ink)}
+.quote figcaption{font-size:var(--step--1);color:var(--teal);font-weight:600}
+
+/* Find us */
+.findus{background:var(--white)}
+.address{font-family:var(--f-display);font-size:var(--step-1);font-style:normal;line-height:1.4}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:2rem 1fr;gap:8px;counter-increment:s;color:var(--ink-soft)}
+.steps li::before{content:counter(s);font-family:var(--f-display);color:var(--teal);font-size:1.25rem;line-height:1.3}
+.steps b{color:var(--ink)}
+
+/* Final CTA */
+.final{position:relative;isolation:isolate;color:var(--white);overflow:hidden}
+.final picture,.final picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:grayscale(1) contrast(1.05)}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--teal);mix-blend-mode:multiply;opacity:.92}
+.final::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,77,77,.55),rgba(15,77,77,.15))}
+.final .wrap{display:grid;gap:20px}
+.final h2{max-width:16ch}
+
+/* Footer */
+.site-foot{background:var(--ink);color:rgba(255,255,255,.8);padding-block:48px calc(96px + env(safe-area-inset-bottom,0px));font-size:var(--step--1)}
+.site-foot .wrap{display:grid;gap:20px}
+.tagline{font-family:var(--f-display);font-size:var(--step-2);color:var(--white)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+.site-foot a{color:rgba(255,255,255,.85)}
+@media (min-width:860px){.site-foot{padding-bottom:48px}}
+
+/* Mobile booking bar */
+.bookbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(250,248,244,.96);border-top:1px solid var(--line);backdrop-filter:blur(6px)}
+.bookbar .btn{flex:1;min-height:48px}
+.bookbar .btn-line{flex:0 0 auto}
+@media (min-width:860px){.bookbar{display:none}}
+
+/* Start page */
+.start-hero .hero-photo img{object-position:50% 22%}
+.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin:0;padding:0;list-style:none;counter-reset:st}
+.steps3 li{background:var(--white);border-radius:var(--radius);padding:22px;display:grid;gap:8px;counter-increment:st}
+.steps3 li::before{content:counter(st);font-family:var(--f-display);font-size:2rem;color:var(--teal);line-height:1}
+.steps3 p{color:var(--ink-soft)}
+.mini-sched{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.mini-sched li{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-variant-numeric:tabular-nums}
+.mini-sched b{color:var(--teal);font-weight:600}
+.offer{background:var(--white);border:2px solid var(--gold);border-radius:var(--radius);padding:24px;display:grid;gap:10px;max-width:520px}
+.offer .amount{font-family:var(--f-display);font-size:var(--step-3);color:var(--teal);line-height:1}
+</style>
+<script data-goatcounter="https://ayogiclife.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../"><b>A Yogic Life</b><small>Klassisches Tantra-Yoga mit Gustavo</small></a>
+    <div class="head-right">
+      <nav class="lang" aria-label="Language"><a href="../../start/" hreflang="en">EN</a><a aria-current="page" href="./" hreflang="de">DE</a></nav>
+      <a class="btn btn-gold" href="https://www.eversports.de/sp/yogic-life" target="_blank" rel="noopener" data-goatcounter-click="book-start-header">Buchen</a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="hero start-hero" aria-labelledby="h">
+  <div class="hero-photo"><picture><source srcset="../../img/sobre-mi.webp" type="image/webp"><img src="../../img/sobre-mi.jpg" alt="Gustavo meditiert mit geschlossenen Augen auf einer Matte im Studio" fetchpriority="high" width="719" height="1200"></picture></div>
+  <div class="hero-text">
+    <p class="eyebrow">Neu hier? Starte hier</p>
+    <h1 id="h">Deine erste Stunde in Berg am Laim.</h1>
+    <p class="lead">Starte mit dem Kennenlern-Paket: 3 Stunden in 3 Wochen. Kleine Gruppen bis 6 Personen, keine Vorkenntnisse nötig, Material ist da.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://www.eversports.de/sp/yogic-life" target="_blank" rel="noopener" data-goatcounter-click="book-start-hero">Kennenlern-Paket buchen · 49 €</a>
+      <a class="btn btn-ghost" href="https://wa.me/4917660602969?text=Hallo%20Gustavo%2C%20ich%20habe%20dich%20%C3%BCber%20Google%20gefunden%20und%20m%C3%B6chte%20gern%20eine%20Stunde%20ausprobieren" target="_blank" rel="noopener" data-goatcounter-click="whatsapp-start-hero">Frag per WhatsApp</a>
+    </div>
+    <p class="trust"><span class="stars" aria-hidden="true">★★★★★</span><span>5,0 aus 12 Google-Bewertungen</span></p>
+  </div>
+</section>
+<section aria-labelledby="how">
+  <div class="wrap" style="display:grid;gap:28px">
+    <div style="display:grid;gap:12px"><p class="eyebrow">So geht’s</p><h2 id="how">Drei einfache Schritte.</h2></div>
+    <ol class="steps3"><li><h3>Paket buchen</h3><p>Auf Eversports, in weniger als zwei Minuten.</p></li><li><h3>Stunden auswählen</h3><p>Wähle 3 Stunden in den nächsten 3 Wochen.</p></li><li><h3>Komm, wie du bist</h3><p>Klingel bei „Garcia Casal“ im Hinterhof. Matten und Hilfsmittel sind da.</p></li></ol>
+    <div class="offer">
+      <h3>Kennenlern-Paket</h3>
+      <p class="amount">49 €</p>
+      <p class="note">3 Stunden in 3 Wochen. Du wählst die Daily-Practice-Stunden, die dir passen.</p>
+      <div class="btns"><a class="btn btn-gold" href="https://www.eversports.de/sp/yogic-life" target="_blank" rel="noopener" data-goatcounter-click="book-start-offer">Kennenlern-Paket buchen</a></div>
+    </div>
+    <div style="display:grid;gap:12px">
+      <h3>Daily-Practice-Zeiten</h3>
+      <ul class="mini-sched"><li>Mo <b>19:15</b></li><li>Di <b>19:00</b></li><li>So <b>09:00</b></li></ul>
+      <p class="note">Advanced Practice am Donnerstag und die Clinics am Samstag kommen später auf deinem Weg.</p>
+    </div>
+  </div>
+</section>
+<section class="prices" aria-labelledby="rev">
+  <div class="wrap reviews-box">
+    <p class="eyebrow" id="rev">Das sagen Übende</p>
+    <div class="quotes"><figure class="quote"><blockquote>„Ich bin seit ca. einem Jahr regelmäßig bei Gustavo und bin sehr froh, dass ich sein Studio gefunden habe.“</blockquote><figcaption>Basti</figcaption></figure><figure class="quote"><blockquote>„Yoga mit Gustavo ist großartig! Er legt großen Wert darauf, dass jeder auf seinen Körper hört &amp; die Grenzen akzeptiert.“</blockquote><figcaption>Caro K.</figcaption></figure></div>
+    <p class="note">Auszüge aus Google-Bewertungen.</p>
+  </div>
+</section>
+<section class="findus" aria-labelledby="find">
+  <div class="wrap split">
+    <div style="display:grid;gap:16px">
+      <h2 id="find">Anfahrt</h2>
+      <address class="address">Berg-am-Laim-Straße 143 · 81673 München</address>
+      <div class="btns"><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=A+Yogic+Life+Berg-am-Laim-Stra%C3%9Fe+143+M%C3%BCnchen" target="_blank" rel="noopener">In Google Maps öffnen</a></div>
+    </div>
+    <ol class="steps"><li><span>Geh in den Hinterhof, etwa 100 m von der Macherei.</span></li><li><span>Klingel bei „Garcia Casal“.</span></li><li><span>Keine Toilette im Studio: Eine öffentliche ist wenige Gehminuten entfernt.</span></li></ol>
+  </div>
+</section>
+<section style="padding-block:40px">
+  <div class="wrap btns"><a class="btn btn-line" href="../">Mehr über das Studio</a></div>
+</section>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <p class="tagline">Mehr Präsenz. Mehr Leben.</p>
+  <nav class="foot-links" aria-label="Footer"><a href="../../impressum/">Impressum</a><a href="../../datenschutz/">Datenschutz</a></nav>
+</div></footer>
+<div class="bookbar">
+  <a class="btn btn-gold" href="https://www.eversports.de/sp/yogic-life" target="_blank" rel="noopener" data-goatcounter-click="book-start-bar">Starten für 49 €</a>
+  <a class="btn btn-line" href="https://wa.me/4917660602969?text=Hallo%20Gustavo%2C%20ich%20habe%20dich%20%C3%BCber%20Google%20gefunden%20und%20m%C3%B6chte%20gern%20eine%20Stunde%20ausprobieren" target="_blank" rel="noopener" data-goatcounter-click="whatsapp-start-bar">WhatsApp</a>
+</div>
+</body>
+</html>
