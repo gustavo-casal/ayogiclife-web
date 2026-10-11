@@ -216,8 +216,9 @@ td small{display:block;color:var(--ink-soft);font-size:var(--step--1)}
   "openingHoursSpecification":[
     {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"19:15","closes":"20:15"},
     {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"18:30","closes":"19:30"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"19:00","closes":"20:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"11:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"12:15","closes":"13:00","validFrom":"2026-11-04"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"20:00","closes":"21:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"10:30"},
     {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"09:00","closes":"10:00"}
   ],
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"12"},
@@ -293,7 +294,7 @@ td small{display:block;color:var(--ink-soft);font-size:var(--step--1)}
     <div class="split">
       <div style="display:grid;gap:18px">
         <p class="eyebrow">Classes</p>
-        <h2 id="classes-title">Three ways to practice.</h2>
+        <h2 id="classes-title">Find the class that fits your day.</h2>
         <div class="class-list">
           <div class="class">
             <p class="meta">Mon · Tue · Sun</p>
@@ -301,14 +302,24 @@ td small{display:block;color:var(--ink-soft);font-size:var(--step--1)}
             <p>Movement, conscious breathing and meditation. The right place to start, whatever your level.</p>
           </div>
           <div class="class">
-            <p class="meta">Saturday morning</p>
+            <p class="meta">Thursday evening · from 15 October</p>
+            <h3>Evening Unwind</h3>
+            <p>A slower Daily Practice in a yin spirit. Longer holds, soft breath, a quiet way to let the day settle.</p>
+          </div>
+          <div class="class">
+            <p class="meta">Wednesday · 45 min · from 4 November</p>
+            <h3>Midday Reset</h3>
+            <p>A short yoga practice in the middle of the working day. Back to your desk clearer and more at ease.</p>
+          </div>
+          <div class="class">
+            <p class="meta">Saturday morning · 90 min</p>
             <h3>Clinic</h3>
             <p>A themed session that goes deeper into one topic, such as breath or the nervous system. Theory in short blocks, plenty of practice.</p>
           </div>
           <div class="class">
-            <p class="meta">Thursday · booking required</p>
+            <p class="meta">Weekends · on request</p>
             <h3>Advanced Practice</h3>
-            <p>For students with a regular practice. Runs when at least two people have booked by the day before.</p>
+            <p>For students with a regular practice. Held at the weekend once at least two people have booked. Get in touch to suggest a date.</p>
           </div>
         </div>
         <div class="arc">
@@ -337,9 +348,11 @@ td small{display:block;color:var(--ink-soft);font-size:var(--step--1)}
           <tbody>
             <tr><td>Monday</td><td>19:15</td><td>Daily Practice</td></tr>
             <tr><td>Tuesday</td><td>18:30</td><td>Daily Practice</td></tr>
-            <tr><td>Thursday</td><td>19:00</td><td>Advanced Practice<small>Booking required, from 2 people</small></td></tr>
-            <tr><td>Saturday</td><td>09:00</td><td>Clinic<small>Themed session, see dates on Eversports</small></td></tr>
+            <tr><td>Wednesday</td><td>12:15</td><td>Midday Reset<small>45 min, from 4 November</small></td></tr>
+            <tr><td>Thursday</td><td>20:00</td><td>Evening Unwind<small>Slower Daily Practice, from 15 October</small></td></tr>
+            <tr><td>Saturday</td><td>09:00</td><td>Clinic<small>90 min, themed session, see dates on Eversports</small></td></tr>
             <tr><td>Sunday</td><td>09:00</td><td>Daily Practice</td></tr>
+            <tr><td>Weekend</td><td>On request</td><td>Advanced Practice<small>Held once at least 2 people have booked</small></td></tr>
           </tbody>
         </table>
       </div>
