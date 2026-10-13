@@ -2,14 +2,419 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Yogic Life – Weiterleitung</title>
-<link rel="canonical" href="https://ayogiclife.de/de/">
-<meta http-equiv="refresh" content="0; url=https://ayogiclife.de/de/">
-<script>location.replace("https://ayogiclife.de/de/");</script>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#FAF8F4;color:#1F2B29;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}a{color:#1A7A7A}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yoga für Teams – A Yogic Life</title>
+<meta name="description" content="Klassisches Yoga für Menschen, die im Beruf viel leisten. Impuls-Abend, regelmäßige Klassen in der Macherei und ein 3-Monats-Programm für Fokus und Resilienz. Berg am Laim, München.">
+<link rel="canonical" href="https://ayogiclife.de/yoga-fuer-unternehmen/">
+<meta property="og:title" content="Yoga für Teams – Ein Reset, der bleibt">
+<meta property="og:description" content="Mehr Energie, Resilienz und Ruhe im Berufsalltag. Klassisches Yoga, direkt neben der Macherei.">
+<meta property="og:image" content="https://ayogiclife.de/img/estudio-sala.jpg">
+<meta property="og:type" content="website">
+<link rel="preload" href="../fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Layout: calm single scroll, photo-led sections alternating left/right; Sage bar, Teal veil on the hero, Gold only for booking. */
+@font-face{font-family:"Marcellus";src:url("../fonts/marcellus-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Figtree";src:url("../fonts/figtree-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Figtree";src:url("../fonts/figtree-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+:root{
+  --sage:#8FA882; --sage-soft:#E7EDE3; --teal:#1A7A7A; --teal-deep:#0F4D4D;
+  --gold:#C8A84B; --gold-hover:#B8963A;
+  --paper:#FAF8F4; --ink:#1F2B29; --ink-soft:#4A5654; --line:#DCE2DA; --white:#FFFFFF;
+  --f-display:"Marcellus","Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --step--1:clamp(.84rem,.8rem + .15vw,.92rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.2rem,1.1rem + .5vw,1.45rem);
+  --step-2:clamp(1.55rem,1.3rem + 1.1vw,2.2rem);
+  --step-3:clamp(2.05rem,1.6rem + 2.2vw,3.4rem);
+  --gutter:clamp(16px,4vw,40px); --maxw:1120px; --radius:6px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:var(--step-3)}
+h3{font-size:var(--step-1)}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-size:var(--step--1);letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.lead{font-size:var(--step-1);color:var(--ink-soft);max-width:38ch}
+.prose{max-width:62ch;color:var(--ink-soft);display:grid;gap:1em}
+section{padding-block:clamp(56px,9vw,112px)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.7em 1.35em;border-radius:999px;font-weight:600;font-size:var(--step-0);text-decoration:none;transition:background .2s,transform .2s;border:2px solid transparent}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-hover)}
+.btn-ghost{border-color:currentColor;color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-line{border-color:var(--teal);color:var(--teal)}
+.btn-line:hover{background:var(--sage-soft)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Header */
+.site-head{position:sticky;top:0;z-index:20;background:var(--sage);color:var(--ink)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1.1}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem}
+.brand small{font-size:.78rem;color:var(--ink);opacity:.82}
+.head-right{display:flex;align-items:center;gap:14px}
+.lang{font-size:var(--step--1);font-weight:600;letter-spacing:.06em;display:flex;gap:6px}
+.lang a,.lang span{color:var(--ink);text-decoration:none;padding:4px}
+.lang [aria-current]{border-bottom:2px solid var(--ink)}
+.lang .soon{opacity:.5}
+.site-head .btn{min-height:40px;padding:.45em 1.1em;font-size:.95rem}
+
+/* Hero */
+.hero{background:var(--teal-deep);color:var(--white);padding-block:0;display:grid}
+.hero-photo{position:relative;aspect-ratio:4/3;max-height:62vh;overflow:hidden}
+.hero-photo picture,.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.hero-text{padding:clamp(28px,6vw,72px) var(--gutter) clamp(36px,6vw,72px);display:grid;gap:20px;align-content:center}
+.hero h1{font-size:var(--step-3);max-width:16ch}
+.hero .lead{color:rgba(255,255,255,.9);max-width:40ch}
+.hero .eyebrow{color:var(--gold)}
+@media (min-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);min-height:min(680px,82vh)}
+  .hero-photo{order:2;aspect-ratio:auto;max-height:none;height:100%}
+  .hero-text{padding-left:max(var(--gutter),calc((100vw - var(--maxw))/2 + var(--gutter)))}
+}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:var(--step--1);color:rgba(255,255,255,.9)}
+.stars{color:var(--gold);letter-spacing:.1em}
+
+/* Why */
+.why{display:grid;gap:clamp(28px,4vw,48px)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.why-item{display:grid;gap:8px;padding-top:18px;border-top:1px solid var(--line)}
+.why-item p{color:var(--ink-soft)}
+
+/* Classes */
+.classes{background:var(--white)}
+.split{display:grid;gap:clamp(28px,5vw,64px);align-items:start}
+@media (min-width:860px){.split{grid-template-columns:1fr 1fr}.split.rev>:first-child{order:2}}
+.split > *{min-width:0}
+.class-list{display:grid;gap:22px;margin-top:8px}
+.class{display:grid;gap:4px}
+.class .meta{font-size:var(--step--1);color:var(--teal);font-weight:600;letter-spacing:.04em}
+.class p{color:var(--ink-soft)}
+.arc{margin-top:8px;padding:22px;background:var(--sage-soft);border-radius:var(--radius);display:grid;gap:12px}
+.arc ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:arc}
+.arc li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;counter-increment:arc}
+.arc li::before{content:counter(arc);font-family:var(--f-display);color:var(--teal);font-size:1.3rem}
+.arc li b{font-weight:600}
+.arc small{color:var(--ink-soft);font-size:var(--step--1)}
+.photo{border-radius:var(--radius);overflow:hidden}
+.photo picture{display:block;height:100%}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo-tall{aspect-ratio:3/4}
+
+/* Schedule */
+.schedule{margin-top:clamp(40px,6vw,64px);display:grid;gap:16px}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:var(--step--1);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+td:first-child{font-weight:600;white-space:nowrap}
+td:nth-child(2){font-family:var(--f-display);font-size:1.15rem;color:var(--teal);white-space:nowrap}
+td small{display:block;color:var(--ink-soft);font-size:var(--step--1)}
+.note{font-size:var(--step--1);color:var(--ink-soft)}
+
+/* Studio */
+.studio-photos{display:grid;gap:12px;grid-template-columns:1.4fr 1fr}
+.studio-photos .photo:first-child{grid-row:span 2}
+.studio-photos .photo:first-child img{aspect-ratio:auto}
+@media (max-width:640px){.studio-photos{grid-template-columns:1fr}.studio-photos .photo:first-child{grid-row:auto}}
+.facts{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.facts li{padding-left:22px;position:relative;color:var(--ink-soft)}
+.facts li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:8px;border-radius:50%;background:var(--sage)}
+
+/* Prices */
+.prices{background:var(--sage-soft)}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:clamp(28px,4vw,44px)}
+.price{background:var(--white);border-radius:var(--radius);padding:24px;display:grid;gap:8px;align-content:start}
+.price .amount{font-family:var(--f-display);font-size:var(--step-2);color:var(--teal);font-variant-numeric:tabular-nums}
+.price p{color:var(--ink-soft);font-size:var(--step--1)}
+.price.featured{outline:2px solid var(--gold)}
+.price .tag{justify-self:start;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:3px 10px;border-radius:999px}
+.price-more{margin-top:16px;background:var(--white);border-radius:var(--radius);padding:8px 24px;display:grid}
+.price-more div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.price-more div:last-child{border-bottom:0}
+.price-more span{color:var(--ink-soft)}
+.price-more b{font-family:var(--f-display);font-weight:400;font-size:1.2rem;color:var(--teal);white-space:nowrap}
+
+/* About */
+.about-photo{aspect-ratio:3/5;max-height:640px}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.creds li{font-size:var(--step--1);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink-soft);background:var(--white)}
+
+/* Tradition */
+.tradition{background:var(--teal-deep);color:var(--white)}
+.tradition .eyebrow{color:var(--gold)}
+.tradition .prose{color:rgba(255,255,255,.86)}
+.tradition .photo img{height:auto}
+
+/* Reviews */
+.reviews-box{display:grid;gap:18px;justify-items:start}
+.score{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.score .big{font-family:var(--f-display);font-size:var(--step-3);color:var(--teal);font-variant-numeric:tabular-nums}
+
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:16px;width:100%}
+.quote{margin:0;background:var(--white);border-radius:var(--radius);padding:24px;display:grid;gap:14px;align-content:space-between}
+.quote blockquote{margin:0;font-family:var(--f-display);font-size:1.15rem;line-height:1.45;color:var(--ink)}
+.quote figcaption{font-size:var(--step--1);color:var(--teal);font-weight:600}
+
+/* Find us */
+.findus{background:var(--white)}
+.address{font-family:var(--f-display);font-size:var(--step-1);font-style:normal;line-height:1.4}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:2rem 1fr;gap:8px;counter-increment:s;color:var(--ink-soft)}
+.steps li::before{content:counter(s);font-family:var(--f-display);color:var(--teal);font-size:1.25rem;line-height:1.3}
+.steps b{color:var(--ink)}
+
+/* Final CTA */
+.final{position:relative;isolation:isolate;color:var(--white);overflow:hidden}
+.final picture,.final picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:grayscale(1) contrast(1.05)}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--teal);mix-blend-mode:multiply;opacity:.92}
+.final::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,77,77,.55),rgba(15,77,77,.15))}
+.final .wrap{display:grid;gap:20px}
+.final h2{max-width:16ch}
+
+/* Footer */
+.site-foot{background:var(--ink);color:rgba(255,255,255,.8);padding-block:48px calc(96px + env(safe-area-inset-bottom,0px));font-size:var(--step--1)}
+.site-foot .wrap{display:grid;gap:20px}
+.tagline{font-family:var(--f-display);font-size:var(--step-2);color:var(--white)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+.site-foot a{color:rgba(255,255,255,.85)}
+@media (min-width:860px){.site-foot{padding-bottom:48px}}
+
+/* Mobile booking bar */
+.bookbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(250,248,244,.96);border-top:1px solid var(--line);backdrop-filter:blur(6px)}
+.bookbar .btn{flex:1;min-height:48px}
+.bookbar .btn-line{flex:0 0 auto}
+@media (min-width:860px){.bookbar{display:none}}
+
+/* Yoga für Teams */
+.hero h1{max-width:12ch}
+.ladder-note{margin-top:16px}
+.for-list{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.for-list li{font-size:var(--step--1);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink-soft);background:var(--white)}
+.disclaimer{font-size:var(--step--1);color:var(--ink-soft)}
+</style>
+<script data-goatcounter="https://ayogiclife.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-<p>Unsere Website ist umgezogen. <a href="https://ayogiclife.de/de/">Weiter zu A Yogic Life</a>.</p>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../de/" aria-label="A Yogic Life, zur Startseite">
+      <b>A Yogic Life</b>
+      <small>Yoga für Teams</small>
+    </a>
+    <div class="head-right">
+      <a class="btn btn-gold" href="https://wa.me/4917660602969?text=Hallo%20Gustavo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Yoga%20f%C3%BCr%20unser%20Team." target="_blank" rel="noopener" data-goatcounter-click="teams-gespraech-1">Gespräch</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-photo">
+    <picture>
+      <source srcset="../img/estudio-sala.webp" type="image/webp">
+      <img src="../img/estudio-sala.jpg" alt="Das Studio: Holzboden, ausgelegte Matten in Petrol, große Fenster" fetchpriority="high" width="1200" height="904">
+    </picture>
+  </div>
+  <div class="hero-text">
+    <p class="eyebrow">Yoga für Teams · Berg am Laim, München</p>
+    <h1 id="hero-title">Ein Reset, der bleibt.</h1>
+    <p class="lead">Klassisches Yoga für Menschen, die im Beruf viel leisten. Mehr Energie, Resilienz und Ruhe. Nur 100 Meter von der Macherei.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://wa.me/4917660602969?text=Hallo%20Gustavo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Yoga%20f%C3%BCr%20unser%20Team." target="_blank" rel="noopener" data-goatcounter-click="teams-gespraech-2">Kurzes Gespräch vereinbaren</a>
+      <a class="btn btn-ghost" href="mailto:gustavo.casal@t-online.de?subject=Yoga%20f%C3%BCr%20Teams" data-goatcounter-click="teams-mail-3">Per E-Mail schreiben</a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="why-title">
+  <div class="wrap why">
+    <div style="display:grid;gap:14px">
+      <p class="eyebrow">Was Teilnehmende erleben</p>
+      <h2 id="why-title">Zurück zu dir, mitten im Arbeitsalltag.</h2>
+      <p class="lead">Menschen aus der Unternehmenswelt kommen regelmäßig zu mir. Das beschreiben sie.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Zurück zu dir</h3>
+        <p>Du kommst bei dir selbst an. Genau dort, wo im Alltag oft kein Platz dafür ist.</p>
+      </div>
+      <div class="why-item">
+        <h3>Ein echter Reset</h3>
+        <p>Berufliche Herausforderungen siehst du danach klarer und mit mehr Abstand. So findest du leichter eine gute Haltung zu dem, was ansteht.</p>
+      </div>
+      <div class="why-item">
+        <h3>Energie, Resilienz, Ruhe</h3>
+        <p>Drei Dinge, die sich gegenseitig tragen. Wer ruhig ist, hat mehr Energie. Wer Energie hat, bleibt belastbar.</p>
+      </div>
+      <div class="why-item">
+        <h3>Besser abschalten</h3>
+        <p>Die meisten üben nach der Arbeit. So geht der Tag bewusst zu Ende. Das unterstützt Erholung und Regeneration, und damit den nächsten Arbeitstag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tradition" aria-labelledby="trad-title">
+  <div class="wrap split rev">
+    <div style="display:grid;gap:18px;align-content:center">
+      <p class="eyebrow">Warum Yoga</p>
+      <h2 id="trad-title">Eine Praxis, die seit Jahrtausenden erprobt ist.</h2>
+      <div class="prose">
+        <p>Yoga wurde entwickelt, um den Geist zu ordnen und Energie zu lenken. Kein Trend, sondern ein bewährter Weg.</p>
+        <p>Hier üben wir die klassische Tradition: bodenständig, klar und ohne Esoterik. Körper, Atem und Aufmerksamkeit arbeiten zusammen.</p>
+      </div>
+    </div>
+    <div class="photo">
+      <picture>
+        <source srcset="../img/clinics-cielo.webp" type="image/webp">
+        <img src="../img/clinics-cielo.jpg" alt="Gustavo steht auf einer Wiese und streckt die Arme zum Himmel" loading="lazy" decoding="async" width="900" height="1200">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="prices" id="angebot" aria-labelledby="angebot-title">
+  <div class="wrap">
+    <div style="display:grid;gap:14px">
+      <p class="eyebrow">Das Angebot</p>
+      <h2 id="angebot-title">Drei Wege, mit mir zu üben.</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price featured">
+        <span class="tag">Kostenlos · Januar 2027</span>
+        <h3>Impuls-Abend</h3>
+        <p>Eine Vinyasa-Praxis plus 45 Minuten Gespräch über Wirkung und Alltag. Ein Abend, um Yoga zu erleben und Fragen zu stellen. Ort und genauer Termin folgen.</p>
+      </div>
+      <div class="price">
+        <h3>Regelmäßige Klassen</h3>
+        <p>Einmal pro Woche, in einem Raum in der Macherei. Für Teams und Einzelne. Kein Weg quer durch die Stadt, direkt im Arbeitsumfeld. Termine nach Absprache.</p>
+      </div>
+      <div class="price">
+        <h3>Fokus &amp; Resilienz</h3>
+        <p>Das 3-Monats-Programm: Yoga, Atemtechniken (Pranayama) und Konzentrationstraining. Einmal pro Woche, in drei Phasen.</p>
+      </div>
+    </div>
+    <p class="note ladder-note">Konditionen nach Absprache. Wir klären im Gespräch, was zu eurem Team passt.</p>
+  </div>
+</section>
+
+<section class="classes" id="programm" aria-labelledby="programm-title">
+  <div class="wrap split">
+    <div style="display:grid;gap:18px">
+      <p class="eyebrow">Das 3-Monats-Programm</p>
+      <h2 id="programm-title">Fokus &amp; Resilienz.</h2>
+      <p class="lead">Ein klarer Weg in drei Phasen. Jede Woche eine feste Einheit.</p>
+      <div class="arc">
+        <p><b>Die drei Phasen</b></p>
+        <ol>
+          <li><span><b>Ankommen</b> <small>Monat 1: das Nervensystem beruhigen, Atem und Körper als stabile Basis</small></span></li>
+          <li><span><b>Vertiefen</b> <small>Monat 2: Pranayama und anhaltende Konzentration, für mehr Fokus</small></span></li>
+          <li><span><b>Integrieren</b> <small>Monat 3: Konzentration und Meditation vertiefen (Samyama), dazu eine eigene Kurzpraxis für den Alltag</small></span></li>
+        </ol>
+        <small>Am Ende hast du eine Praxis, die du allein weiterführen kannst.</small>
+      </div>
+    </div>
+    <div class="photo photo-tall">
+      <picture>
+        <source srcset="../img/clases-cobra.webp" type="image/webp">
+        <img src="../img/clases-cobra.jpg" alt="Gustavo in einer sanften Rückbeuge auf der Matte am See, das Gesicht zur Sonne" loading="lazy" decoding="async" width="900" height="1200">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section id="fuer-wen" aria-labelledby="fuer-title">
+  <div class="wrap" style="display:grid;gap:18px">
+    <p class="eyebrow">Für wen</p>
+    <h2 id="fuer-title">Für Teams und für Einzelne.</h2>
+    <div class="prose">
+      <p>Für Unternehmen, die ihren Mitarbeitenden eine Pause mit Wirkung ermöglichen wollen. Und für alle, die im Beruf gefordert sind und sich eine feste Praxis wünschen. Vorkenntnisse sind nicht nötig.</p>
+    </div>
+    <ul class="for-list" aria-label="Ansprechpersonen">
+      <li>People &amp; Culture</li>
+      <li>HR</li>
+      <li>Office &amp; Community Management</li>
+      <li>Teams in der Macherei</li>
+      <li>Einzelne Berufstätige</li>
+    </ul>
+  </div>
+</section>
+
+<section class="findus" id="about" aria-labelledby="about-title">
+  <div class="wrap split">
+    <div class="photo about-photo">
+      <picture>
+        <source srcset="../img/sobre-mi.webp" type="image/webp">
+        <img src="../img/sobre-mi.jpg" alt="Gustavo meditiert mit geschlossenen Augen auf einer Matte im Studio" loading="lazy" decoding="async" width="719" height="1200">
+      </picture>
+    </div>
+    <div style="display:grid;gap:18px;align-content:center">
+      <p class="eyebrow">Dein Lehrer</p>
+      <h2 id="about-title">Hallo, ich bin Gustavo.</h2>
+      <div class="prose">
+        <p>Seit über 18 Jahren praktiziere ich Yoga in der klassischen Tantra-Tradition. 2023 wurde ich von der Jivamukti Yoga School als Lehrer zertifiziert. Dazu kommen Ausbildungen in Achtsamkeitsmeditation, Pranayama und Breathwork.</p>
+        <p>Mein Studio liegt in Berg am Laim, etwa 100 Meter von der Macherei. Bewegung, bewusstes Atmen und Meditation verbinde ich zu einer Praxis, die in den Berufsalltag passt.</p>
+      </div>
+      <ul class="creds" aria-label="Ausbildung">
+        <li>18+ Jahre Praxis</li>
+        <li>Jivamukti-zertifiziert, 2023</li>
+        <li>Pranayama &amp; Breathwork</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-title">
+  <picture>
+    <source srcset="../img/fondo-agua.webp" type="image/webp">
+    <img src="../img/fondo-agua.jpg" alt="" loading="lazy" decoding="async" width="1200" height="900">
+  </picture>
+  <div class="wrap">
+    <h2 id="final-title">Der erste Schritt: ein kurzes Gespräch.</h2>
+    <p class="lead" style="color:rgba(255,255,255,.9)">20 Minuten. Wir klären, was zu eurem Team passt.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://wa.me/4917660602969?text=Hallo%20Gustavo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Yoga%20f%C3%BCr%20unser%20Team." target="_blank" rel="noopener" data-goatcounter-click="teams-gespraech-4">Gespräch vereinbaren</a>
+      <a class="btn btn-ghost" href="mailto:gustavo.casal@t-online.de?subject=Yoga%20f%C3%BCr%20Teams" data-goatcounter-click="teams-mail-5">Per E-Mail schreiben</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="tagline">Mehr Präsenz. Mehr Leben.</p>
+    <p>A Yogic Life · Berg-am-Laim-Straße 143 · 81673 München · +49 176 6060 2969</p>
+    <p class="disclaimer">Yoga ersetzt keine medizinische Behandlung.</p>
+    <nav class="foot-links" aria-label="Fußzeile">
+      <a href="../de/">Zum Studio</a>
+      <a href="https://www.instagram.com/ayogiclife_muenchen/" target="_blank" rel="noopener">Instagram</a>
+      <a href="../impressum/">Impressum</a>
+      <a href="../datenschutz/">Datenschutz</a>
+    </nav>
+    <p>© 2026 A Yogic Life</p>
+  </div>
+</footer>
+
+<div class="bookbar" aria-label="Schnell Kontakt aufnehmen">
+  <a class="btn btn-gold" href="https://wa.me/4917660602969?text=Hallo%20Gustavo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Yoga%20f%C3%BCr%20unser%20Team." target="_blank" rel="noopener" data-goatcounter-click="teams-gespraech-6">Gespräch vereinbaren</a>
+  <a class="btn btn-line" href="mailto:gustavo.casal@t-online.de?subject=Yoga%20f%C3%BCr%20Teams" aria-label="Per E-Mail schreiben" data-goatcounter-click="teams-mail-7">E-Mail</a>
+</div>
+
 </body>
 </html>
